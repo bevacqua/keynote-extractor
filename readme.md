@@ -18,7 +18,9 @@ You can use this script to take a Keynote presentation and build a JSON represen
 
 This is useful if you prepare your slides using Presenter Notes, and write them in such a way that you could then create blog posts with pretty much the same contents.
 
-# Compilation
+You can then use the Node.js script to automate the uploading of the slides, and then build some custom Markdown representation of your slides and presenter notes side by side.
+
+# AppleScript Compilation
 
 Compile both scripts from source:
 
@@ -27,9 +29,13 @@ osacompile -o json.scpt json.applescript
 osacompile -o keynote-extractor.scpt keynote-extractor.applescript
 ```
 
-# Usage
+# AppleScript Usage
 
-Open your presentation in Keynote. Then, open `keynote-extractor.scpt` with Script Editor. The JSON file, a README and an image for each slide will be placed in a folder like `~/Desktop/keynote-$PRESENTATION_TITLE`.
+Open your presentation in Keynote. Then, open `keynote-extractor.scpt` with Script Editor. Run the script. The JSON file, a README and an image for each slide will be placed in a folder like `~/Desktop/keynote-$PRESENTATION_TITLE`.
+
+# Node.js Usage
+
+Once you've successfully executed the AppleScript program, you can run `node . ~/Desktop/keynote-$PRESENTATION_TITLE` to upload the slides. It will update `~/Desktop/keynote-$PRESENTATION_TITLE/readme.md` with a better representation that's ready to paste and publish anywhere Markdown is supported.
 
 # License
 

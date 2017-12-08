@@ -21,7 +21,7 @@ tell application "Keynote"
     set notes to presenter notes of every slide
   end tell
 
-  export front document to outputFolder as slide images
+  export front document to file outputFolder as slide images
 end tell
 
 -- prepare JSON payload
