@@ -1,0 +1,8 @@
+{
+  "name": "keynote-extractor",
+  "dependencies": {
+    "contra": "^1.9.4",
+    "glob": "^7.1.2",
+    "request": "^2.83.0"
+  }
+}
